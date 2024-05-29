@@ -60,12 +60,17 @@ cd plotting/
 python plot.py Taxi-v3 --show
 ```
 
+This generates two types of plots.
+
+The first shows the average performance of the new policy or the 10%CVaR or 1%CVaR, which consider the 10% or 1% worst results across different dataset sizes.
+
+The second type shows a heatmap of the results normalized with respect to the performance of the behavior policy.
 
 ### Full experiments
 
 Clear the results folder `rm -rf results/Taxi-v3/behavior_policy/*`
 
-Run the same experiments using more seeds (one hundred or more), with more dataset sizes and varying the N_wedges hyperparameter
+Run the same experiments using more seeds (thirty or more), with more dataset sizes and varying the N_wedges hyperparameter
 
 - dataset sizes: [1, 2, 5, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000]
 - n_wedges: [5, 7, 10, 15, 20, 30, 50, 70, 100]
