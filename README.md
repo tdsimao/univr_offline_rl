@@ -43,11 +43,7 @@ python training_baseline_policy.py --help
 The following command runs the safe policy improvement experiments with seeds `1-2` using `1` process and the behavior policy from the file `data/Taxi-v3.pkl`.
 
 ```bash
-python main.py -c 1 -s $(seq -s \  1 2) -p data/Taxi-v3.pkl
-```
-
-```text
-
+python main.py -c 1 --seeds $(seq -s \  1 2) --dataset_sizes 1 100 1000 --n_wedges 1 10 -p data/Taxi-v3.pkl
 ```
 
 Use the following command for further options.
@@ -64,3 +60,17 @@ cd plotting/
 python plot.py Taxi-v3 --show
 ```
 
+
+### Full experiments
+
+Clear the results folder `rm -rf results/Taxi-v3/behavior_policy/*`
+
+Run the same experiments using more seeds (one hundred or more), with more dataset sizes and varying the N_wedges hyperparameter
+
+- dataset sizes: [1, 2, 5, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000]
+- n_wedges: [5, 7, 10, 15, 20, 30, 50, 70, 100]
+
+Analyse the results:
+
+- How the N_wedge parameter affects the final policies?
+- Considering the conditional value at risk measure, which N_wedge better results in terms of reliability and performance gain?
