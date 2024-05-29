@@ -1,0 +1,9 @@
+Taxi-v3:
+  env: Taxi
+  pib: ../data/Taxi-v3.yaml
+  results: ../results/Taxi-v3/behavior_policy/
+  pouct-perf: 0.845
+  legend: True
+  y_lim:
+  - -20
+  - 4
