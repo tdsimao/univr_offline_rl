@@ -78,4 +78,4 @@ Run the same experiments using more seeds (thirty or more), with more dataset si
 Analyse the results:
 
 - How the N_wedge parameter affects the final policies?
-- Considering the conditional value at risk measure, which N_wedge better results in terms of reliability and performance gain?
+- Considering the conditional value at risk measure, which N_wedge has a better trade-off between reliability and performance improvement?
