@@ -110,6 +110,7 @@ class MDP:
 
         # TODO implement the policy improvement step for the state s given the SPIBB constraints
 
+        new_pi /= np.sum(new_pi)
         assert (new_pi >= 0).all()
         assert_approx_equal(new_pi.sum(), 1)
         return new_pi
